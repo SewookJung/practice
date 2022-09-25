@@ -1,10 +1,20 @@
-레포 주 목적
+연습 리스트
 =============
-1. Django Rest Framework 연습
+- Django Rest Framework
 
     - [ ] 기본 설정
-    - [ ] context 테스트
+    - [X] context 테스트
+      - [X] default provide context 확인
+      - [X] extra context
+      - [X] default provide & extra context
 
-2. isort & black & flake8 연습
-3. pre-commit 연습
-4. Drf-yasg 연습
+- formatting
+    - [ ] isort
+    - [ ] context 테스트
+    - [ ] black
+    - [ ] flake8
+    - [ ] pre-commit
+
+- Drf-yasg
+
+- DocString
