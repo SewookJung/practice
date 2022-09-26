@@ -11,8 +11,8 @@
 > 3. 영역  
  프레임워크(장고) 및 각종 써드파티(DRF, yasg) 등등..  
 > 4. 개발 환경  
- Django  
  Python  
+ Django   
  Drf-yasg  
  Drf-spectacular   
 
