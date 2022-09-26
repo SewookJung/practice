@@ -17,4 +17,6 @@
 
 - Drf-yasg
 
+- Drf-spectacular
+
 - DocString
