@@ -1,7 +1,6 @@
 from django.urls import path
 
-from .views import ProvideContextView, NotProvideContextView, CustomContextView
-
+from .views import CustomContextView, NotProvideContextView, ProvideContextView
 
 urlpatterns = [
     path("context/provide", ProvideContextView.as_view(), name="provide_context"),
