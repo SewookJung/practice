@@ -1,10 +1,13 @@
 from rest_framework.generics import GenericAPIView
-from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from rest_framework.status import HTTP_200_OK
 
 from .models import Context
-from .serializers import ProvideContextSerializer, NotProvideContextSerializer, CustomContextSerializer
+from .serializers import (
+    CustomContextSerializer,
+    NotProvideContextSerializer,
+    ProvideContextSerializer,
+)
 
 """ Context test
 
@@ -13,6 +16,7 @@ Purpose:
  - How can use the context
  - Check provide default context
 """
+
 
 class ProvideContextView(GenericAPIView):
     """ProvideContextView
@@ -27,9 +31,9 @@ class ProvideContextView(GenericAPIView):
 
     Result:
         - context:{"request", "view", "format"}
-        
+
     """
-    
+
     queryset = Context.objects.all()
     serializer_class = ProvideContextSerializer
 
@@ -41,8 +45,9 @@ class ProvideContextView(GenericAPIView):
 
 class NotProvideContextView(GenericAPIView):
     """NotProvideContextView
-    
-    Even the GenericAPIView inherited, if use serializer directly does not provied default context
+
+    Even the GenericAPIView inherited, if use serializer directly does not provied
+    default context
 
     Check Point:
         - Use serializer directly
@@ -50,12 +55,11 @@ class NotProvideContextView(GenericAPIView):
 
     Result:
         - context:{}
-        
+
     """
 
     queryset = Context.objects.all()
     serializer_class = NotProvideContextSerializer
-
 
     def get(self, request, *args, **kwargs):
         queryset = self.get_queryset()
@@ -65,7 +69,7 @@ class NotProvideContextView(GenericAPIView):
 
 class CustomContextView(GenericAPIView):
     """CustomContextView
-    
+
     Use custom context with default provide context
 
     Check Point:
@@ -75,7 +79,7 @@ class CustomContextView(GenericAPIView):
     Result:
         - context:{"request", "view", "format", "custom_context"}
         - context:{"custom_context"}
-        
+
     """
 
     queryset = Context.objects.all()
@@ -87,14 +91,17 @@ class CustomContextView(GenericAPIView):
         context.update({"custom_context": "custom context data"})
         return context
 
-    
     def get(self, request, *args, **kwargs):
         queryset = self.get_queryset()
-        
-        custom_context_serializer = self.get_serializer(queryset, many=True, context={"custom_context": "data"})
-        # result = {custom_context} 
+
+        custom_context_serializer = self.get_serializer(
+            queryset, many=True, context={"custom_context": "data"}
+        )
+        print(custom_context_serializer.context)
+        # result = {custom_context}
 
         update_default_provide_context = self.get_serializer(queryset, many=True)
+        print(update_default_provide_context.context)
         # result = {request, format, view, custom_context}
-        
+
         return Response(data=update_default_provide_context.data, status=HTTP_200_OK)
