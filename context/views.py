@@ -31,7 +31,6 @@ class ProvideContextView(GenericAPIView):
 
     Result:
         - context:{"request", "view", "format"}
-
     """
 
     queryset = Context.objects.all()
