@@ -26,11 +26,17 @@
         - [X] extra context
         - [X] default provide & extra context
 
-- formatting
-    - [X] isort
-    - [X] black
-    - [X] flake8
-    - [ ] pre-commit
+- Code Style
+  - 테스트 배경
+    - 정해진 규칙 없이 개발자들의 스타일에 맞게 코딩을 진행하고 있어 정해진 규칙과 스타일을 통해 코드의 통일성을 높이는데 목적
+    - 테스트 리스트
+      - Lint
+       - [X] flake8
+      - Formatter
+       - [X] black
+       - [X] isort
+      - Git hook
+       - [ ] pre-commit
 
 - Drf-yasg
 
