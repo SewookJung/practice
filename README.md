@@ -27,9 +27,9 @@
         - [X] default provide & extra context
 
 - formatting
-    - [ ] isort
-    - [ ] black
-    - [ ] flake8
+    - [X] isort
+    - [X] black
+    - [X] flake8
     - [ ] pre-commit
 
 - Drf-yasg
