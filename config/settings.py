@@ -37,23 +37,21 @@ DJANGO_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-] 
-
-PROJECT_APPS = [
-    "context"
 ]
+
+PROJECT_APPS = ["context"]
 
 THIRD_PARTY_APPS = [
     "django",
-    "rest_framework"
+    "rest_framework",
 ]
 
 INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS + THIRD_PARTY_APPS
 
 REST_FRAMEWORK = {
-   "DEFAULT_PERMISSION_CLASSES": [
-    'rest_framework.permissions.AllowAny',
-   ]
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.AllowAny",
+    ]
 }
 
 
@@ -139,5 +137,3 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-
-
