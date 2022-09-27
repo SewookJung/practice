@@ -2,6 +2,13 @@
 
 count = True
 
-exclude = .git, __pycache__
-
 max-line-length = 88
+
+exclude =
+    .git,
+    .gitignore,
+    *.pot,
+    *.py[co],
+    __pycache__,
+    venv,
+    .env
