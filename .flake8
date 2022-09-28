@@ -11,4 +11,5 @@ exclude =
     *.py[co],
     __pycache__,
     venv,
-    .env
+    .env,
+    *migrations*
