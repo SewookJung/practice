@@ -113,3 +113,6 @@
       - [ ] Action
       - [ ] PR
       - [ ] Issue
+      - [ ] Project
+      - [ ] Organization
+        - [ ] Team
