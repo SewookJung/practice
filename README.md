@@ -46,7 +46,7 @@
 
 |Topic|Description|Link|
 |:--:|:--:|:--:|
-|Context|현업에서 context에 대한 기능을 제대로 파악하지 못하고 남발하는 사례|#4|
+|Context|현업에서 context에 대한 기능을 제대로 파악하지 못하고 남발하는 사례|#1|
 
 - Django Rest Framework
     - 기본 설정
