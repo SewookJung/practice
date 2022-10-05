@@ -7,9 +7,3 @@ class Context(models.Model):
 
     def get_id(self):
         return f"Name {self.name}"
-
-
-class Test(models.Model):
-    context = models.ForeignKey(
-        Context, on_delete=models.CASCADE, verbose_name="context", related_name="test"
-    )
