@@ -40,9 +40,9 @@ DJANGO_APPS = [
 ]
 
 PROJECT_APPS = [
-    "context",
-    "orm",
-    "drf_viewset",
+    "apps.django.orm",
+    "apps.drf.context",
+    "apps.drf.viewset",
 ]
 
 THIRD_PARTY_APPS = [
