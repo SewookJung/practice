@@ -39,7 +39,11 @@ DJANGO_APPS = [
     "django.contrib.staticfiles",
 ]
 
-PROJECT_APPS = ["context", "orm"]
+PROJECT_APPS = [
+    "context",
+    "orm",
+    "drf_viewset",
+]
 
 THIRD_PARTY_APPS = [
     "django",
