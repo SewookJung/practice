@@ -20,5 +20,6 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/", include("context.urls")),
     path("api/", include("orm.urls")),
+    path("api/", include("drf_viewset.urls")),
     path("__debug__/", include("debug_toolbar.urls")),
 ]
