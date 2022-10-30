@@ -1,7 +1,7 @@
 ---
 name: Notes
 about: A template for write down of the learned skills.
-title: 'Notes'
+title: ''
 labels: ''
 assignees: ''
 
