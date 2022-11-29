@@ -41,6 +41,7 @@ DJANGO_APPS = [
 
 PROJECT_APPS = [
     "apps.django.orm",
+    "apps.django.database",
     "apps.drf.context",
     "apps.drf.viewset",
 ]
