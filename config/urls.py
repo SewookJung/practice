@@ -21,5 +21,6 @@ urlpatterns = [
     path("api/", include("apps.drf.context.urls")),
     path("api/", include("apps.drf.viewset.urls")),
     path("api/", include("apps.django.orm.urls")),
+    path("api/", include("apps.django.database.urls")),
     path("__debug__/", include("debug_toolbar.urls")),
 ]
